@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block titulo  %}  Inicio  {% endblock %}
+
+{% block contenido  %}  
+
+
+<div class="p-5 bg-light">
+    <div class="container">
+        <h1 class="display-3">Bienvenidos al sitio de la libreria </h1>      
+        <p class="lead">ISC-202</p>
+        <hr class="my-2">
+
+        <p class="lead">
+            <a class="btn btn-prymary btn-lg" href="{% url 'libros' %}" role="button">Empezar </a>
+        </p>
+        
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Libros XYZ - Bienvenidos</title>
+            <style>
+                body {
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                    color: #333;
+                }
+                header {
+                    background-image: url('{{ libro.imagen.url }}');
+                    background-size: cover;
+                    background-position: center;
+                    height: 60vh;
+                    color: black;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+                header h1 {
+                    font-size: 4rem;
+                    margin: 0;
+                }
+                header p {
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+                .container {
+                    padding: 20px;
+                    max-width: 1200px;
+                    margin: auto;
+                }
+                section {
+                    margin-bottom: 20px;
+                }
+                h2 {
+                    color: #444;
+                }
+                footer {
+                    background-color: #333;
+                    color: white;
+                    text-align: center;
+                    padding: 10px 0;
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>Libros XYZ</h1>
+                <p>Explora el Mundo de la Lectura</p>
+            </header>
+        
+            <div class="container">
+                <section id="quienes-somos">
+                    <h2>Quiénes Somos</h2>
+                    <p>Libros XYZ es una tienda de libros con más de 20 años de experiencia en el mercado. Nos dedicamos a promover la lectura y a proporcionar a nuestros clientes una amplia selección de libros en diversos géneros. Nuestro objetivo es fomentar el amor por la lectura y apoyar a la comunidad de lectores con productos y servicios de alta calidad.</p>
+                </section>
+        
+                <section id="que-vendemos">
+                    <h2>Qué Vendemos</h2>
+                    <p>Ofrecemos una variedad de libros, desde novelas clásicas hasta los bestsellers más recientes. También disponemos de libros infantiles, juveniles, de ciencia ficción, fantasía, no ficción, y más. Además, contamos con una selección de libros usados en excelente estado a precios accesibles.</p>
+                </section>
+        
+                <section id="beneficios-de-leer">
+                    <h2>Beneficios de Leer</h2>
+                    <p>La lectura tiene múltiples beneficios para la salud mental y emocional. Entre ellos se incluyen:</p>
+                    <ul>
+                        <li>Mejora del enfoque y la concentración.</li>
+                        <li>Reducción del estrés.</li>
+                        <li>Estimulación de la mente.</li>
+                        <li>Expansión del vocabulario.</li>
+                        <li>Desarrollo de habilidades de escritura.</li>
+                        <li>Incremento del conocimiento y la comprensión de diferentes temas.</li>
+                    </ul>
+                </section>
+        
+                <section id="consejos-para-elegir-un-libro">
+                    <h2>Consejos para Elegir un Libro</h2>
+                    <p>Elegir el libro perfecto puede ser una tarea desafiante. Aquí te ofrecemos algunos consejos:</p>
+                    <ul>
+                        <li>Considera tus intereses y pasatiempos. Elige libros sobre temas que te apasionen.</li>
+                        <li>Lee las reseñas y recomendaciones de otros lectores.</li>
+                        <li>Explora diferentes géneros para descubrir nuevos intereses.</li>
+                        <li>No tengas miedo de abandonar un libro si no te engancha.</li>
+                        <li>Consulta las listas de bestsellers y premios literarios para encontrar libros populares y aclamados.</li>
+                    </ul>
+                </section>
+            </div>
+        
+            <footer>
+                <p>&copy; 2024 Libros XYZ. Todos los derechos reservados.</p>
+            </footer>
+        </body>
+        </html>
+        
+
+    </div>
+</div>
+
+
+
+{% endblock %}
